@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSU Performance Module</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-a"></div>
+    <div class="bg-orb orb-b"></div>
+
+    <main class="layout">
+      <section class="hero-card glass">
+        <div class="hero-top">
+          <p class="badge">KSU WebUI • Smart Panel</p>
+          <span class="status" id="systemStatus">Ready</span>
+        </div>
+        <h1>Performance Control Module</h1>
+        <p>
+          Premium floating panel for quick tuning. Choose optimized modes, enable
+          performance spoof profiles, and lock CPU/GPU limits for maximum output.
+        </p>
+
+        <div class="mode-grid" id="modeGrid">
+          <button class="mode-card active" data-mode="max">
+            <strong>Max Performance</strong>
+            <small>Lock CPU + GPU to peak boost profile</small>
+          </button>
+          <button class="mode-card" data-mode="balance">
+            <strong>Balanced</strong>
+            <small>Performance & efficiency split</small>
+          </button>
+          <button class="mode-card" data-mode="saver">
+            <strong>Power Saver</strong>
+            <small>Lower clocks and prioritize battery</small>
+          </button>
+        </div>
+
+        <div class="toggle-row">
+          <label class="switch-item">
+            <span>Spoof Engine</span>
+            <input type="checkbox" id="spoofToggle" checked />
+            <i></i>
+          </label>
+          <label class="switch-item">
+            <span>Smart Lock CPU/GPU</span>
+            <input type="checkbox" id="lockToggle" checked />
+            <i></i>
+          </label>
+        </div>
+      </section>
+
+      <aside class="floating-panel glass" id="floatingPanel">
+        <div class="panel-head">
+          <h2>Smart Floating Panel</h2>
+          <button id="floatPin" aria-label="Pin panel">📌</button>
+        </div>
+
+        <div class="meter-wrap">
+          <div>
+            <div class="meter-label"><span>CPU Target</span><b id="cpuLabel">100%</b></div>
+            <div class="meter"><span id="cpuFill" style="width: 100%"></span></div>
+          </div>
+          <div>
+            <div class="meter-label"><span>GPU Target</span><b id="gpuLabel">100%</b></div>
+            <div class="meter"><span id="gpuFill" style="width: 100%"></span></div>
+          </div>
+        </div>
+
+        <div class="panel-foot">
+          <div>
+            <small>Active Profile</small>
+            <p id="activeProfile">Max Performance</p>
+          </div>
+          <button class="apply-btn" id="applyBtn">Apply Settings</button>
+        </div>
+      </aside>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
