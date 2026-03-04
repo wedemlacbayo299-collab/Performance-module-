@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KSU Performance Module • Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/app.css" />
+  <link rel="stylesheet" href="assets/css/module-customize.css" />
+</head>
+<body>
+  <div class="bg-orb orb-a"></div><div class="bg-orb orb-b"></div>
+  <div class="app-shell">
+    <aside class="sidebar glass">
+      <div class="brand">KSU Performance<small>Premium Control Suite</small></div>
+      <nav class="nav">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="module-customize.html">Module Customize</a>
+        <a href="module-profiles.html">Profiles</a>
+        <a href="module-spoof.html">Spoof Engine</a>
+        <a href="module-lock.html">CPU/GPU Lock</a>
+      </nav>
+    </aside>
+
+    <main class="main glass">
+      <section class="top">
+        <span class="status" id="systemStatus">Ready</span>
+        <h1>Performance Dashboard</h1>
+        <p class="sub">One place to switch Max Performance, Balanced, and Power Saver.</p>
+      </section>
+
+      <section class="mode-grid" id="modeGrid">
+        <button class="mode-card active" data-mode="max"><strong>Max Performance</strong><br /><small>Lock CPU + GPU to max target</small></button>
+        <button class="mode-card" data-mode="balance"><strong>Balanced</strong><br /><small>Stable performance and efficient power</small></button>
+        <button class="mode-card" data-mode="saver"><strong>Power Saver</strong><br /><small>Reduce clocks for lower power</small></button>
+      </section>
+
+      <section class="kpi">
+        <div class="item"><small>CPU Target</small><h3 id="cpuLabel">100%</h3></div>
+        <div class="item"><small>GPU Target</small><h3 id="gpuLabel">100%</h3></div>
+        <div class="item"><small>Active Profile</small><h3 id="activeProfile">Max Performance</h3></div>
+      </section>
+    </main>
+
+    <aside class="right-panel glass">
+      <h3>Smart Floating Panel</h3>
+      <div class="switch-item"><span>Spoof Engine</span><label><input type="checkbox" id="spoofToggle" checked /><i></i></label></div>
+      <div class="switch-item" style="margin-top:.6rem"><span>Smart Lock CPU/GPU</span><label><input type="checkbox" id="lockToggle" checked /><i></i></label></div>
+      <div class="list">
+        <div class="item"><span>CPU</span><div class="meter"><span id="cpuFill" style="width:100%"></span></div></div>
+        <div class="item"><span>GPU</span><div class="meter"><span id="gpuFill" style="width:100%"></span></div></div>
+      </div>
+      <button class="btn" id="applyBtn" style="margin-top:.8rem; width:100%">Apply Settings</button>
+    </aside>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
