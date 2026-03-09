@@ -1,0 +1,5 @@
+.mode-grid { display:grid; gap:.65rem; margin-top: 1rem; }
+.mode-card { border:1px solid var(--line); background: rgba(255,255,255,.03); color: var(--text); border-radius: 12px; padding: .75rem .9rem; cursor:pointer; text-align:left; }
+.mode-card.active, .mode-card:hover { border-color: rgba(92,141,255,.8); background: rgba(92,141,255,.16); }
+.kpi { display:grid; grid-template-columns: repeat(3, 1fr); gap:.6rem; margin-top: .8rem; }
+.kpi .item { padding:.6rem .7rem; border:1px solid var(--line); border-radius: 10px; background: rgba(255,255,255,.03); }
